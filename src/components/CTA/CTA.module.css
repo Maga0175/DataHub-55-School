@@ -1,0 +1,94 @@
+.ctaSection {
+  background: linear-gradient(135deg, #ff7a5c 0%, #ff3f6c 100%);
+  color: white;
+  padding: 60px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: 'MontserratCustom', sans-serif; /* <-- основной шрифт */
+}
+
+.ctaBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.textBlock {
+  max-width: 600px;
+}
+
+.title {
+  margin: 0 0 10px 0;
+  font-size: 26px;
+  font-family: 'MontserratCustom', sans-serif; /* <-- заголовок */
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'MontserratCustom', sans-serif; /* <-- описание */
+  opacity: 0.95;
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background: white;
+  color: #ff3f6c;
+  padding: 14px 26px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'MontserratCustom', sans-serif; /* <-- кнопка */
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 63, 108, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 28px rgba(255, 63, 108, 0.4);
+  background: #fff8f8;
+}
+
+/* Анимация появления текста */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .ctaBox {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .textBlock {
+    max-width: 100%;
+  }
+}

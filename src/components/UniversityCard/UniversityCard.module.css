@@ -1,0 +1,251 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: cardFade 0.65s ease forwards;
+  opacity: 0;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.slideImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.slideImage:hover {
+  transform: scale(1.05);
+}
+
+.infoBlock {
+  padding: 18px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.08));
+  transition: transform 0.25s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+  transition: color 0.25s ease;
+}
+
+.card:hover .title {
+  color: #3b5bff;
+}
+
+.subtitle {
+  margin: 0 0 10px 0;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.description {
+  margin: 0 0 12px 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.academyTitle {
+  font-weight: 600;
+  margin: 12px 0 6px 0;
+  color: #3b5bff;
+  font-size: 15px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #334155;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.listItem:hover {
+  transform: translateX(4px);
+  color: #3b5bff;
+}
+
+.bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3b5bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* 🔥 Анимации появления */
+@keyframes cardFade {
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Адаптив */
+@media (max-width: 700px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+  }
+}
+.sliderContainer {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease;
+  /* лёгкий зум при смене */
+  transform: scale(1);
+}
+
+.sliderContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sliderContainer {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slideImage.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.slideImage.inactive {
+  opacity: 0;
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+/* Информация */
+.infoBlock {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 92px;
+  height: auto;
+  object-fit: contain;
+  flex: 0 0 92px;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.academyTitle {
+  font-size: 18px; /* увеличенный размер */
+  font-weight: 600;
+  margin: 12px 0 6px 0;
+  color: #3b5bff;
+}
+
+/* список */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3b5bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}

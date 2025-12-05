@@ -1,0 +1,17 @@
+.policySection {
+  padding: 60px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e293b;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}

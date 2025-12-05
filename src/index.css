@@ -1,0 +1,87 @@
+/* 🔹 Подключение шрифтов */
+@font-face {
+  font-family: 'DrukCyr';
+  src: url('./assets/fonts/DrukCyr-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratCustom';
+  src: url('./assets/fonts/ofont.ru_Montserrat.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 🔹 Переменные для удобства */
+:root {
+  --color-blue: #1d4ed8;
+  --color-coral: #ff7a5a;
+  --color-light-gray: #f5f5f6;
+  --color-text: #0f172a;
+  --max-width: 920px;
+
+  --font-header: 'DrukCyr', sans-serif;
+  --font-body: 'MontserratCustom', sans-serif;
+}
+
+/* 🔹 Глобальные сбросы */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 🔹 Контейнер для макета */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 🔹 Секции */
+.section {
+  padding: 64px 0;
+}
+
+/* 🔹 Списки университетов */
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+}
+
+.bulletList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #334155;
+  font-family: var(--font-body);
+}
+
+/* 🔹 Маленький круг-иконка */
+.bullet {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-blue);
+  border-radius: 50%;
+  flex: 0 0 18px;
+}
+
+/* 🔹 Заголовки, кнопки, header, футер */
+h1, h2, h3, h4, h5, h6, button, .header, footer {
+  font-family: var(--font-header);
+}
