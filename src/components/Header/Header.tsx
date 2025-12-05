@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 
   const handleAuthClick = (type: 'login' | 'register') => {
     setMenuOpen(false); // закрываем меню
-    navigate('/Auth'); // ведёт на страницу Auth
+    navigate(`/Auth?type=${type}`); // ведёт на страницу Auth с параметром
   };
 
   return (
@@ -19,19 +19,19 @@ const Header: React.FC = () => {
         <div className={styles.inner}>
           <img src={logo} alt="Logo" className={styles.logo} />
 
-            <nav className={styles.nav}>
-            <a href="/">Главная</a>
-            <a href="/programs">Программы</a>
-            <a href="/features">Преимущества</a>
-            <a href="/universities">Университеты</a>
-            <a href="/contacts">Контакты</a>
-            </nav>
-
+          <nav className={styles.nav}>
+            <Link to="/">Главная</Link>
+            <Link to="/programs">Программы</Link>
+            <Link to="/features">Преимущества</Link>
+            <Link to="/universities">Университеты</Link>
+            <Link to="/contacts">Контакты</Link>
+          </nav>
 
           <div className={styles.rightSide}>
-<Link to="/application" className={styles.cta}>
-  Оставить заявку
-</Link>
+            <Link to="/application" className={styles.cta}>
+              Оставить заявку
+            </Link>
+
             <div className={styles.userMenuWrapper}>
               <img
                 src={userIcon}

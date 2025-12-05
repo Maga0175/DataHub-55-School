@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+
 import UniversityCard from '../UniversityCard/UniversityCard';
 import { universities } from '../../data/data';
 
