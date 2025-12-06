@@ -5,7 +5,7 @@ const Contacts: React.FC = () => {
     <section className="section">
       <div className="container">
         <h1>Контакты</h1>
-        <p>Телефон, email, адрес университета и форма обратной связи.</p>
+        <p>Дизайнер: Алиска, Писал код: @magaa0609</p>
       </div>
     </section>
   );

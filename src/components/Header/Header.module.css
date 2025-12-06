@@ -62,11 +62,14 @@
   position: relative;
   font-family: 'MontserratCustom', sans-serif; /* <-- правая часть */
 }
-
+.ctaWrapper {
+  margin-right: 12px; /* только кнопка сдвигается */
+}
 .cta {
   display: inline-block; /* или block, если хочешь растягивать */
   background: #3b5bff;
   color: white;
+  
   padding: 6px 16px;
   border-radius: 5px;
   font-weight: 600;

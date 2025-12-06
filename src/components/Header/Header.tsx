@@ -27,9 +27,9 @@ const Header: React.FC = () => {
             <Link to="/contacts">Контакты</Link>
           </nav>
 
-          <div className={styles.rightSide}>
-            <Link to="/application" className={styles.cta}>
-              Оставить заявку
+            <div className={styles.rightSide}>
+            <Link to="/application" className={styles.ctaWrapper}>
+                <span className={styles.cta}>Оставить заявку</span>
             </Link>
 
             <div className={styles.userMenuWrapper}>

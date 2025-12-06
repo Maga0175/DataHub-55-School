@@ -4,10 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 
-// Точка входа приложения
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/DataHub-55-School">
       <App />
     </BrowserRouter>
   </React.StrictMode>
